@@ -11,16 +11,25 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
-load("//tools/cr_checker:cr_checker.bzl", "copyright_checker")
+load("@score_docs_as_code//:docs.bzl", "docs")
+load("@score_tooling//:defs.bzl", "cli_helper", "copyright_checker", "setup_starpls")
 
 test_suite(
     name = "format.check",
+    tags = [
+        "cli_help=Check formatting:\n" +
+        "bazel test //:format.check",
+    ],
     tests = ["//tools/format:format.check"],
 )
 
 alias(
     name = "format.fix",
     actual = "//tools/format:format.fix",
+    tags = [
+        "cli_help=Fix formatting:\n" +
+        "bazel run //:format.fix",
+    ],
 )
 
 copyright_checker(
@@ -32,6 +41,13 @@ copyright_checker(
         "//:BUILD",
         "//:MODULE.bazel",
     ],
+    config = "@score_tooling//cr_checker/resources:config",
+    template = "@score_tooling//cr_checker/resources:templates",
+    visibility = ["//visibility:public"],
+)
+
+cli_helper(
+    name = "cli-help",
     visibility = ["//visibility:public"],
 )
 
@@ -39,3 +55,15 @@ exports_files([
     "MODULE.bazel",
     "BUILD",
 ])
+
+setup_starpls(
+    name = "starpls_server",
+    visibility = ["//visibility:public"],
+)
+
+docs(
+    data = [
+        "@score_process//:needs_json",
+    ],
+    source_dir = "docs",
+)

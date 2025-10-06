@@ -21,7 +21,7 @@ Overall goals
 -------------
 
 .. stkh_req:: Reuse of application software via managed APIs
-   :id: STKH_REQ__20
+   :id: stkh_req__overall_goals__reuse_of_app_soft
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -34,7 +34,7 @@ Overall goals
 
 
 .. stkh_req:: Enable cooperation via standardized APIs
-    :id: STKH_REQ__30
+    :id: stkh_req__overall_goals__enable_cooperation
     :reqtype: Non-Functional
     :security: NO
     :safety: QM
@@ -44,7 +44,7 @@ Overall goals
     The software platform shall where possible be based on existing standards (e.g. network protocols).
 
 .. stkh_req:: Variant management
-    :id: STKH_REQ__60
+    :id: stkh_req__overall_goals__variant_management
     :reqtype: Functional
     :security: NO
     :safety: QM
@@ -58,7 +58,7 @@ Overall goals
 
 
 .. stkh_req:: IP protection
-   :id: STKH_REQ__50
+   :id: stkh_req__overall_goals__ip_protection
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -75,7 +75,7 @@ Functional requirements
 -----------------------
 
 .. stkh_req:: File Based Configuration
-   :id: STKH_REQ__8
+   :id: stkh_req__functional_req__file_based
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -85,7 +85,7 @@ Functional requirements
    The platform shall support configuration of applications via files (e.g. yaml, json)
 
 .. stkh_req:: Support of safe Key/Value store
-   :id: STKH_REQ__350
+   :id: stkh_req__functiona_req__support_of_store
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -95,10 +95,10 @@ Functional requirements
    The software platform shall provide towards the applications a safe
    (ISO26262-2018) key/value store.
 
-   Note: This is part of 0.1 release and therefore can only support ASIL_B. Goal is ASIL_D.
+   Note: This is part of 0.5 release and therefore can only support ASIL_B. Goal is ASIL_D.
 
 .. stkh_req:: Safe Configuration
-   :id: STKH_REQ__9
+   :id: stkh_req__functional_req__safe_config
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -106,22 +106,36 @@ Functional requirements
    :status: valid
 
    The platform shall support safe configuration.
-   Note: This is part of 0.1 release and therefore can only support ASIL_B. Goal is ASIL_D.
+
+   Note: This is part of 0.5 release and therefore can only support ASIL_B. Goal is ASIL_D.
 
 
 .. stkh_req:: Safe Computation
-   :id: STKH_REQ__10
+   :id: stkh_req__functional_req__safe_comput
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_D
+   :safety: ASIL_B
    :rationale: Safe systems require computations to be done in safe environments.
    :status: valid
 
    The platform shall support safe computation.
 
+   Note: This is part of 0.5 release and therefore can only support ASIL_B. Goal is ASIL_D.
+
+
+.. stkh_req:: Base Libraries
+   :id: stkh_req__functional_req__base_libraries
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Common libraries reduce duplication, improve consistency and quality across components.
+   :status: valid
+
+   The software platform shall provide a set of base libraries offering common functionality for platform components.
+
 
 .. stkh_req:: Hardware Accelerated Computation
-   :id: STKH_REQ__11
+   :id: stkh_req__functional_req__hardware_comput
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -132,7 +146,7 @@ Functional requirements
 
 
 .. stkh_req:: Data Persistency
-   :id: STKH_REQ__12
+   :id: stkh_req__functional_req__data_persistency
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -143,7 +157,7 @@ Functional requirements
 
 
 .. stkh_req:: Operating System
-   :id: STKH_REQ__13
+   :id: stkh_req__functional_req__operating_system
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -153,7 +167,7 @@ Functional requirements
    The platform shall support operating systems compliant with IEEE Std 1003.1 (2004 Edition or newer)
 
 .. stkh_req:: Video subsystem
-   :id: STKH_REQ__340
+   :id: stkh_req__functional_req__video_subsystem
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -172,7 +186,7 @@ Functional requirements
 
 
 .. stkh_req:: Compute subsystem
-   :id: STKH_REQ__330
+   :id: stkh_req__functional_req__comp_subsystem
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -194,7 +208,7 @@ Functional requirements
      * GSML serialized data
 
 .. stkh_req:: Communication with external MCUs/standby controllers
-   :id: STKH_REQ__310
+   :id: stkh_req__functional_req__comm_with_control
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -215,7 +229,7 @@ Dependability
 -------------
 
 .. stkh_req:: Automotive Safety Integrity Level
-   :id: STKH_REQ__70
+   :id: stkh_req__dependability__automotive_safety
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -225,14 +239,14 @@ Dependability
    The software platform shall support applications with an automotive safety
    integrity level up to ASIL-B.
 
-   Note: This is part of 0.1 release and therefore can only support ASIL_B. Goal is ASIL_D.
+   Note: This is part of 0.5 release and therefore can only support ASIL_B. Goal is ASIL_D.
 
 
 .. stkh_req:: Safety features
-   :id: STKH_REQ__80
+   :id: stkh_req__dependability__safety_features
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_D
+   :safety: ASIL_B
    :rationale: tbd
    :status: valid
 
@@ -250,9 +264,11 @@ Dependability
    * Power management integrated circuit (PMIC), external watchdog and voltage monitoring
    * Safe switch from engineering for field mode and back
 
+   Note: This is part of 0.5 release and therefore can only support ASIL_B. Goal is ASIL_D.
+
 
 .. stkh_req:: Availability
-   :id: STKH_REQ__90
+   :id: stkh_req__dependability__availability
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -264,7 +280,7 @@ Dependability
 
 
 .. stkh_req:: Security features
-   :id: STKH_REQ__140
+   :id: stkh_req__dependability__security_features
    :reqtype: Functional
    :security: YES
    :safety: QM
@@ -320,10 +336,10 @@ interaction)** — each emphasize different operational priorities.
 
 
 .. stkh_req:: Support for Time-based Architectures
-   :id: STKH_REQ__281
+   :id: stkh_req__app_architectures__support_time
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :rationale: tbd - potentially above explanation
    :status: valid
 
@@ -332,7 +348,7 @@ interaction)** — each emphasize different operational priorities.
 
 
 .. stkh_req:: Support for Data-driven Architecture
-   :id: STKH_REQ__282
+   :id: stkh_req__app_architectures__support_data
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -342,7 +358,7 @@ interaction)** — each emphasize different operational priorities.
    The platform shall support an event-driven, high-throughput application architecture where execution is triggered by data changes.
 
 .. stkh_req:: Support for Request-driven Architecture
-   :id: STKH_REQ__283
+   :id: stkh_req__app_architectures__support_request
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -357,7 +373,7 @@ Execution model
 ---------------
 
 .. stkh_req:: Processes and thread management
-   :id: STKH_REQ__280
+   :id: stkh_req__execution_model__processes
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -380,7 +396,7 @@ Execution model
      * signal handling, error handling (FPU Exceptions, other traps …)
 
 .. stkh_req:: Short application cycles
-   :id: STKH_REQ__110
+   :id: stkh_req__execution_model__short_app_cycles
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -391,7 +407,7 @@ Execution model
    platform assumed this is supported by the underlying hardware.
 
 .. stkh_req:: Realtime capabilities
-   :id: STKH_REQ__111
+   :id: stkh_req__execution_model__realtime_cap
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -402,7 +418,7 @@ Execution model
    (timing events, interrupts) within a defined timing interval.
 
 .. stkh_req:: Startup performance
-   :id: STKH_REQ__112
+   :id: stkh_req__execution_model__startup_perf
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -413,7 +429,7 @@ Execution model
    resume from hibernate mode.
 
 .. stkh_req:: Low power mode
-   :id: STKH_REQ__113
+   :id: stkh_req__execution_model__low_power
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -426,7 +442,7 @@ Communication
 -------------
 
 .. stkh_req:: Inter-process Communication
-   :id: STKH_REQ__2
+   :id: stkh_req__communication__inter_process
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -435,9 +451,18 @@ Communication
 
    The platform shall support inter-process communication.
 
+.. stkh_req:: ABI Compatible Data Types
+   :id: stkh_req__communication__abi_compatible
+   :reqtype: Functional
+   :security: NO
+   :safety: QM
+   :rationale: ABI compatiblity ensures that the same memory location is correctly interpreted by different programming languages.
+   :status: valid
+
+   The platform shall support ABI compatible data types for zero-copy communication between Rust and C++ applications.
 
 .. stkh_req:: Intra-process Communication
-   :id: STKH_REQ__3
+   :id: stkh_req__communication__intra_process
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -447,7 +472,7 @@ Communication
    The platform shall support intra-process communication.
 
 .. stkh_req:: Stable application interfaces
-   :id: STKH_REQ__171
+   :id: stkh_req__communication__stable_app_inter
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -458,7 +483,7 @@ Communication
    external interfaces to keep application interfaces stable.
 
 .. stkh_req:: Extensible External Communication
-   :id: STKH_REQ__5
+   :id: stkh_req__communication__extensible_external
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -469,18 +494,20 @@ Communication
 
 
 .. stkh_req:: Safe Communication
-   :id: STKH_REQ__6
+   :id: stkh_req__communication__safe
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_D
+   :safety: ASIL_B
    :rationale: Distributed safe systems often require communication to be safe.
    :status: valid
 
    The platform shall support safe communication.
 
+   Note: This is part of 0.5 release and therefore can only support ASIL_B. Goal is ASIL_D.
+
 
 .. stkh_req:: Secure Communication
-   :id: STKH_REQ__7
+   :id: stkh_req__communication__secure
    :reqtype: Functional
    :security: YES
    :safety: QM
@@ -490,7 +517,7 @@ Communication
    The platform shall support secure communication.
 
 .. stkh_req:: Supported network protocols
-   :id: STKH_REQ__160
+   :id: stkh_req__communication__supported_net
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -509,7 +536,7 @@ Communication
 
 
 .. stkh_req:: Quality of service
-   :id: STKH_REQ__170
+   :id: stkh_req__communication__service_quality
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -526,7 +553,7 @@ Communication
 
 
 .. stkh_req:: Automotive diagnostics
-   :id: STKH_REQ__180
+   :id: stkh_req__communication__auto_diagnostics
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -534,16 +561,292 @@ Communication
    :status: valid
 
    The following diagnostic protocols shall be supported
-   * UDS (ISO14229) Diagnostics
+   * SOVD (ISO 17978)
+   * UDS (ISO 14229) Diagnostics
    * Diagnostic trouble codes
    * Diagnostic jobs
+
+Time
+----
+
+.. stkh_req:: Vehicle Time base Synchronization
+   :id: stkh_req__time__vehicle_time_sync
+   :reqtype: Functional
+   :security: NO
+   :safety: QM
+   :rationale: Enables the system to compare events chronologically.
+   :status: valid
+
+   The software platform shall provide a time synchronization framework to synchronize its clock
+   to Time Master within the vehicle.
+
+.. stkh_req:: Vehicle Time base API
+   :id: stkh_req__time__vehicle_time_api
+   :reqtype: Functional
+   :security: NO
+   :safety: QM
+   :rationale: Enables an application to correlate its data with a vehicle-internal time reference for event timestamp and chronological events comparison.
+   :status: valid
+
+   The software platform shall provide access to synchronized vehicle time.
+
+.. stkh_req:: Synchronize the HW clock with Vehicle Time
+   :id: stkh_req__time__hw_clock_sync
+   :reqtype: Functional
+   :security: NO
+   :safety: QM
+   :rationale: Enables the system to compare events from different ECUs chronologically, using the same time base for timestamping ingress and egress frames.
+   :status: valid
+
+   The software platform shall synchronize the local HW clock to vehicle time.
+
+.. stkh_req:: Time Synchronization with external sources
+   :id: stkh_req__time__absolute_time_sync
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Enables the system to validate a certificate or token with temporal validity conditions, adding a UTC-timestamp to a data set.
+   :status: valid
+
+   The software platform shall provide a framework to synchronize the clock to external-to-vehicle absolute time base (UTC).
+
+.. stkh_req:: Absolute time base API
+   :id: stkh_req__time__absolute_time_api
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Enables an application to correlate its data with an absolute vehicle-external time reference for event timestamping and chronological events comparison.
+   :status: valid
+
+   The software platform shall provide access to the absolute time base, synchronized with external time sources.
+
+.. stkh_req:: Local High precision Clock API
+   :id: stkh_req__time__high_precision_clock_api
+   :reqtype: Functional
+   :security: NO
+   :safety: QM
+   :rationale: Enables an application to get the current system time, which is essential for time-sensitive operations and event scheduling, via common, mockable and standardized API.
+   :status: valid
+
+   The software platform shall provide access to the current high precision clock from the system time provider in nanoseconds.
+
+   Note: to which clock the high precision clock is mapped, depends on the system design.
+
+.. stkh_req:: Local Monotonic Clock API
+   :id: stkh_req__time__monotonic_clock_api
+   :reqtype: Functional
+   :security: NO
+   :safety: QM
+   :rationale: Enables an application to get the current system time, which is essential for time-sensitive operations and event scheduling, via common, mockable and standardized API.
+   :status: valid
+
+   The software platform shall provide access to the current monotonic clock from the system time provider.
+
+   Note: to which clock the monotonic clock is mapped, depends on the system design.
+
+AI Platform
+-----------
+
+
+.. stkh_req:: On-board ML Workloads
+   :id: stkh_req__ai_platform__enablement
+   :reqtype: Functional
+   :security: NO
+   :safety: QM
+   :rationale: Modern vehicles require the integration of ML capabilities to remain competitive and support customer expectations.
+   :status: valid
+
+   The platform shall support the execution of traditional ML workloads on-board.
+
+
+.. stkh_req:: Support for Safety-Critical ML
+   :id: stkh_req__ai_platform__safety_critical
+   :reqtype: Functional
+   :security: NO
+   :safety: ASIL_B
+   :rationale: Some ML-based functionality is required to be certified up to ASIL-B.
+   :status: valid
+
+   The platform shall support safety-compliant (ASIL-B) deployment of AI/ML components, including inference backends and pipelines.
+
+
+.. stkh_req:: Runtime Efficiency for Edge Devices
+   :id: stkh_req__ai_platform__runtime_efficiency
+   :reqtype: Non-Functional
+   :security: NO
+   :safety: QM
+   :rationale: Automotive platforms have limited compute and thermal budgets.
+   :status: valid
+
+   The AI platform shall be optimized for runtime performance and memory footprint on embedded hardware targets.
+
+
+.. stkh_req:: Platform Portability (QNX + Linux)
+   :id: stkh_req__ai_platform__platform_portability
+   :reqtype: Non-Functional
+   :security: NO
+   :safety: QM
+   :rationale: AI/ML use cases span both safety and non-safety environments, requiring portability across operating systems.
+   :status: valid
+
+   The platform shall support both QNX (for safety) and Linux (for GenAI and flexibility) with reusable components.
+
+
+.. stkh_req:: Secure Model Execution
+   :id: stkh_req__ai_platform__model_security
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: AI model execution must be protected against tampering or abuse.
+   :status: valid
+
+   The platform shall ensure secure, verified, and integrity-checked model execution.
+
+
+.. stkh_req:: Deterministic Execution Paths
+   :id: stkh_req__ai_platform__runtime_determinism
+   :reqtype: Non-Functional
+   :security: NO
+   :safety: ASIL_B
+   :rationale: Safety certification requires predictable and bounded system behavior.
+   :status: valid
+
+   The platform shall ensure deterministic behavior for AI components used in safety-relevant paths.
+
+
+.. stkh_req:: On-board GenAI Workloads
+   :id: stkh_req__gen_ai__enablement
+   :reqtype: Functional
+   :security: NO
+   :safety: QM
+   :rationale: Modern vehicles require the integration of AI/ML capabilities to remain competitive and support customer expectations.
+   :status: valid
+
+   The platform shall support the execution of Generative AI workloads on-board.
+
+
+.. stkh_req:: GenAI User Interaction
+   :id: stkh_req__gen_ai__interaction
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: HMIs are expected to support intelligent, natural interaction using LLM-based assistants.
+   :status: valid
+
+   The platform shall support on-device GenAI-based models with user interaction.
+
+
+.. stkh_req:: Action Safety and Governance
+   :id: stkh_req__gen_ai__safety_filter
+   :reqtype: Functional
+   :security: YES
+   :safety: ASIL_B
+   :rationale: GenAI output may be unpredictable or unsafe and must be controlled before affecting vehicle behavior.
+   :status: valid
+
+   The platform shall validate all actions proposed by GenAI models against safety and policy rules prior to execution.
+
+
+.. stkh_req:: Seamless Integration with Vehicle Systems
+   :id: stkh_req__gen_ai__vehicle_com
+   :reqtype: Functional
+   :security: YES
+   :safety: ASIL_B
+   :rationale: AI components must interact with vehicle state and control interfaces.
+   :status: valid
+
+   The platform shall expose structured APIs to access vehicle state and execute safe commands.
+
+
+Diagnostics and Fault Management
+--------------------------------
+
+.. stkh_req:: Diagnostic via SOVD
+   :id: stkh_req__diagnostics__via_sovd
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Enables modern, scalable diagnostics using a standard REST-based protocol to improve integration, interoperability, and maintainability.
+   :status: valid
+
+   The system shall support vehicle diagnostics via the SOVD protocol as defined in ISO 17978, to allow scalable and secure diagnostic access.
+
+.. stkh_req:: Fault Reporting Infrastructure
+   :id: stkh_req__diagnostics__fault_reporting
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Enables applications and components to report faults in a structured, reusable, and system-wide accessible manner.
+   :status: valid
+
+   The system shall support a reusable fault reporting infrastructure that enables applications and platform components to report, persist, and manage diagnostic fault information.
+
+.. stkh_req:: Readout DTCs via SOVD
+   :id: stkh_req__diagnostics__dtc_read_sovd
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Enables reading of Diagnostic Trouble Codes (DTCs) from the ECU for various use-cases like production or maintenance.
+   :status: valid
+
+   The system shall provide users the ability to retrieve current Diagnostic Trouble Codes (DTCs) from the ECU via the SOVD protocol.
+
+.. stkh_req:: Extensibility of Diagnostic Services
+   :id: stkh_req__diagnostics__custom_services
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Enables OEMs and developers to implement system-specific or project-specific routines for diagnostic control and testing.
+   :status: valid
+
+   The diagnostic system shall support extensibility mechanisms that allow integration of custom diagnostic services and routines via the SOVD interface.
+
+.. stkh_req:: Compatibility with UDS Testers
+   :id: stkh_req__diagnostics__uds_tester_compat
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Ensures continued usability of existing test infrastructure, avoiding costly replacement of legacy tools and ensuring fulfillment of legal requirements.
+   :status: valid
+
+   The diagnostic system shall provide compatibility with UDS-based testers by offering a proxy to translate UDS requests into SOVD-compatible actions.
+
+.. stkh_req:: Compatibility with UDS ECUs
+   :id: stkh_req__diagnostics__uds_ecus
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Ensures continued operability of ECUs that are not SOVD-capable.
+   :status: valid
+
+   The diagnostic system shall support integration with ECUs that use UDS by providing a compatibility adapter to translate SOVD requests to UDS commands.
+
+.. stkh_req:: Support for Distributed and Multi-ECU Diagnostics
+   :id: stkh_req__diagnostics__distributed_support
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Enables the system to operate in modern, distributed vehicle architectures where diagnostics span multiple ECUs and subsystems.
+   :status: valid
+
+   The diagnostic system shall support distributed diagnostics across multiple ECUs and network segments, enabling routing and aggregation of diagnostic data.
+
+.. stkh_req:: Secure Access to Diagnostic Interfaces
+   :id: stkh_req__diagnostics__secure_access
+   :reqtype: Functional
+   :security: YES
+   :safety: QM
+   :rationale: Diagnostic access allows deep system introspection and manipulation, which must be protected against unauthorized use.
+   :status: valid
+
+   The diagnostic system shall enforce secure access control for all diagnostic interfaces, including authentication, encryption, and role-based access enforcement.
 
 
 Hardware support
 ----------------
 
 .. stkh_req:: Chipset support for ARM64 and x64
-   :id: STKH_REQ__190
+   :id: stkh_req__hardware_support__chipset_support
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -554,7 +857,7 @@ Hardware support
 
 
 .. stkh_req:: Virtualization support for debug and testing
-   :id: STKH_REQ__200
+   :id: stkh_req__hardware_support__debug_and_test
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -566,7 +869,7 @@ Hardware support
 
 
 .. stkh_req:: Support of container technologies
-   :id: STKH_REQ__210
+   :id: stkh_req__hardware_support__container_tech
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -585,7 +888,7 @@ Developer experience
 --------------------
 
 .. stkh_req:: IDL Support
-   :id: STKH_REQ__220
+   :id: stkh_req__dev_experience__idl_support
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -597,7 +900,7 @@ Developer experience
 
 
 .. stkh_req:: Developer experience and development toolchain
-   :id: STKH_REQ__230
+   :id: stkh_req__dev_experience__dev_toolchain
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -616,7 +919,7 @@ Developer experience
 
 
 .. stkh_req:: Performance analysis
-   :id: STKH_REQ__240
+   :id: stkh_req__dev_experience__perf_analysis
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -630,7 +933,7 @@ Developer experience
    * RAM usage statistics for long-term Memory behavior
 
 .. stkh_req:: Tracing of execution
-   :id: STKH_REQ__241
+   :id: stkh_req__dev_experience__tracing_of_exec
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -638,7 +941,7 @@ Developer experience
    :status: valid
 
    The platform shall support the tracing of events (start, stop) of executable
-   entities and kernel threads on all computation units e.g. 
+   entities and kernel threads on all computation units e.g.
 
    * CPU
    * GPU
@@ -647,10 +950,10 @@ Developer experience
    * etc.
 
 .. stkh_req:: Tracing of communication
-   :id: STKH_REQ__242
+   :id: stkh_req__dev_experience__tracing_of_comm
    :reqtype: Non-Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :rationale: tbd
    :status: valid
 
@@ -658,7 +961,7 @@ Developer experience
    and external communication systems.
 
 .. stkh_req:: Tracing of memory access
-   :id: STKH_REQ__243
+   :id: stkh_req__dev_experience__tracing_of_memory
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -666,13 +969,13 @@ Developer experience
    :status: valid
 
    The platform shall support the tracing of memory events (allocation, copy,
-   de-allocation) for different types of memory e.g. 
+   de-allocation) for different types of memory e.g.
 
    * CPU Memory
    * GPU Memory
 
 .. stkh_req:: Timing analysis
-   :id: STKH_REQ__120
+   :id: stkh_req__dev_experience__timing_analysis
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -683,7 +986,7 @@ Developer experience
    timing requirements with state-of-the-art analysis tools.
 
 .. stkh_req:: Debugging
-   :id: STKH_REQ__250
+   :id: stkh_req__dev_experience__debugging
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -693,9 +996,19 @@ Developer experience
    The software platform shall provide a method and interface to enable
    debugging of the software on target and in vehicle.
 
+.. stkh_req:: Mockup implementation for application testing
+   :id: stkh_req__dev_experience__mockup_public_apis
+   :reqtype: Functional
+   :security: NO
+   :safety: QM
+   :rationale: Enables unit, component and integration testing for both platform related and non-platform related applications.
+   :status: valid
+
+   The software platform shall provide support for mocking its public interfaces,
+   enabling unit, component and integration testing of applications.
 
 .. stkh_req:: Programming languages for application development
-   :id: STKH_REQ__260
+   :id: stkh_req__dev_experience__prog_languages
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -703,7 +1016,7 @@ Developer experience
    :status: valid
 
    The platform shall support implementation of applications in the following
-   programming languages up to the highest ASIL level as defined in :need:`STKH_REQ__70`:
+   programming languages up to the highest ASIL level as defined in :need:`stkh_req__dependability__automotive_safety`:
 
    * C
    * C++
@@ -711,7 +1024,7 @@ Developer experience
 
 
 .. stkh_req:: Reprocessing and simulation support
-   :id: STKH_REQ__270
+   :id: stkh_req__dev_experience__reprocessing
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -722,7 +1035,7 @@ Developer experience
 
 
 .. stkh_req:: Logging support
-   :id: STKH_REQ__290
+   :id: stkh_req__dev_experience__logging_support
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -739,7 +1052,7 @@ Developer experience
    * Logging of early startup events
 
 .. stkh_req:: Previous boot logging
-   :id: STKH_REQ__291
+   :id: stkh_req__dev_experience__boot_logging
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -755,7 +1068,7 @@ Integration
 -----------
 
 .. stkh_req:: Multirepo integration
-   :id: STKH_REQ__INT_multi_repo_integration
+   :id: stkh_req__integration__multi_repo
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -769,21 +1082,21 @@ Quality
 -------
 
 .. stkh_req:: Document assumptions and design decisions
-   :id: STKH_REQ__QLY_document_assumptions_and_design_decisions
+   :id: stkh_req__quality__assumptions_and_dd
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
    :rationale: This is a usability constraint needed for long term maintenance support
    :status: valid
 
-   All assumptions and design decisions made shall be specified as requirements and agreed within the SCORE community.
+   All assumptions and design decisions made shall be specified as requirements and agreed within the S-CORE community.
 
 
 Requirements Engineering
 ------------------------
 
 .. stkh_req:: Requirements traceability
-   :id: STKH_REQ__RE_requirements_traceability
+   :id: stkh_req__re_requirements__traceability
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -793,7 +1106,7 @@ Requirements Engineering
    All requirements shall be linked from lower to upper level, whereby the top-level are the stakeholder requirements.
 
 .. stkh_req:: Document requirements as code
-   :id: STKH_REQ__RE_requirements_as_code
+   :id: stkh_req__requirements__as_code
    :reqtype: Non-Functional
    :security: NO
    :safety: QM

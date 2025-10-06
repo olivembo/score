@@ -14,8 +14,8 @@
 
 .. _releases:
 
-SCORE Releases Overview
-=======================
+S-CORE Releases Overview
+========================
 
 Roadmap
 --------
@@ -29,22 +29,22 @@ Roadmap is a living document.
 Overview
 --------
 
-.. image:: _assets/score_v_05.svg
-   :width: 900
+.. image:: _assets/architecture.drawio.svg
+   :width: 1000
    :alt: Infrastructure overview
    :align: center
 
 SW Module List
 --------------
 
-.. list-table:: SCORE software modules overview
+.. list-table:: S-CORE software modules overview
    :header-rows: 1
 
    * - SW Module Name
      - Committer List
      - Release
      - Date
-     - Contribution Request
+     - Feature (Change) Request
      - Repo
      - GitHub Discussions
    * - IPC
@@ -53,28 +53,28 @@ SW Module List
      - Q4
      - _
      - `inc_mw_com <https://github.com/eclipse-score/inc_mw_com>`_
-     - `Communication CTF <https://github.com/orgs/eclipse-score/discussions/categories/communication-cft>`_
+     - `Communication CTF <https://github.com/orgs/eclipse-score/discussions/categories/communication-ft>`_
    * - Fixed Execution Order Framework (incl. Orchestrator)
      - Holger Grandy, Gerd Schäfer, Nico Hartmann, Sven Kappel, Thilo Schmitt
      - v0.5
      - Q4
      - _
      - `inc_feo <https://github.com/eclipse-score/inc_feo>`_
-     - `FEO CTF <https://github.com/orgs/eclipse-score/discussions/categories/feo-cft>`_
+     - `FEO CTF <https://github.com/orgs/eclipse-score/discussions/categories/feo-ft>`_
    * - Logging
      - Holger Grandy, Gerd Schäfer, Nico Hartmann
      - v0.5
      - Q4
      - _
      - `inc_mw_log <https://github.com/eclipse-score/inc_mw_log>`_
-     - `Logging CTF <https://github.com/orgs/eclipse-score/discussions/categories/logging-cft>`_
+     - `Logging CTF <https://github.com/orgs/eclipse-score/discussions/categories/logging-ft>`_
    * - Persistency
      - Gerd Schäfer, Nico Hartmann, Sven Kappel
      - v0.5
      - Q4
      - _
      - `inc_mw_per <https://github.com/eclipse-score/inc_mw_per>`_
-     - `Persistency CTF <https://github.com/orgs/eclipse-score/discussions/categories/persistency-cft>`_
+     - `Persistency CTF <https://github.com/orgs/eclipse-score/discussions/categories/persistency-ft>`_
    * - Integration Testing Framework
      - Holger Grandy
      - v0.5
@@ -124,3 +124,9 @@ SW Module List
      - _
      - _
      - _
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+
+   platform_release_note

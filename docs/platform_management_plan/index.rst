@@ -1,6 +1,6 @@
 ..
    # *******************************************************************************
-   # Copyright (c) 2024 Contributors to the Eclipse Foundation
+   # Copyright (c) 2025 Contributors to the Eclipse Foundation
    #
    # See the NOTICE file(s) distributed with this work for additional
    # information regarding copyright ownership.
@@ -12,46 +12,31 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _pmp:
+.. document:: Platform Management Plan
+   :id: doc__platform_mgt_plan
+   :status: draft
+   :safety: ASIL_B
+   :realizes: PROCESS_wp__platform_mgmt
+   :tags: platform_management
 
 Platform Management Plan
 ========================
 
-+---------------------------+-------------------------------+
-| DOCUMENT IDENTIFICATION   |                               |
-+===========================+===============================+
-| Document Type             | Plan                          |
-+---------------------------+-------------------------------+
-| Document ID               | PLATFORM-MANAGEMENT-PLAN      |
-+---------------------------+-------------------------------+
-| Project Name              | SCORE                         |
-+---------------------------+-------------------------------+
-| ASIL                      | B                             |
-+---------------------------+-------------------------------+
-| AUTHOR                    | <Process Manager>             |
-+---------------------------+-------------------------------+
-| Reviewer                  | <Quality Manager>             |
-+---------------------------+-------------------------------+
-| Approver                  | <Project Manager>             |
-+---------------------------+-------------------------------+
-| Status                    | DRAFT                         |
-+---------------------------+-------------------------------+
+.. _pmp:
 
 .. toctree::
    :maxdepth: 2
    :caption: Content
 
    project_management
-   stakeholder_management
    safety_management
-   risk_management
+   security_management
    quality_management
    config_management
    tool_management
    release_management
    problem_resolution
    change_management
-   requirements_management
    software_verification
    documentation_management
    software_development

@@ -29,9 +29,9 @@ Documentation
    <div id="videowrapper">
       <div id="fullScreenDiv">
          <div id="score-title">
-               Eclipse SCORE
-               <span id="score-subtitle">Eclipse Safe Open Vehicle Core</span>
-               <span id="score-phrase">Software Documentation</span>
+           Eclipse S-CORE
+               <!--<img id="logo_center_light" class="logo" src="_static/S-CORE_Logo_RGB.svg" width="600px"/>
+               <img id="logo_center_drk" class="logo" src="_static/S-CORE_Logo_white.svg" width="600px"/>-->
          </div>
       </div>
    </div>
@@ -39,10 +39,8 @@ Documentation
 Welcome & Overview
 ------------------
 
-**Welcome to the Software documentation of the SCORE project.**
+**Welcome to the Software documentation of the S-CORE project.**
 
-If this is the first time you get in touch with SCORE, the `SCORE main page <https://eclipse-score.github.io/>`__
-may be a good starting point to receive first insights of the project itself.
 
 Software artifacts
 ~~~~~~~~~~~~~~~~~~
@@ -54,8 +52,8 @@ Software artifacts
 
       Requirements
       ^^^
-      Analyse :ref:`Stakeholder <stakeholder_requirements>` or :ref:`Tool <tool_requirements>` requirements for
-      the work with and implementation inside SCORE.
+      Analyze :ref:`Stakeholder <stakeholder_requirements>` requirements for
+      the work with and implementation inside S-CORE.
       Or get the complete picture on the :ref:`requirements` page.
 
 
@@ -64,7 +62,7 @@ Software artifacts
 
       Features
       ^^^
-      :ref:`Features <features>` are the heart of the SCORE software.
+      :ref:`Features <features>` are the heart of the S-CORE software.
       Understand the internal details of :ref:`Infrastructure <infrastructure_feature>`
       or :ref:`Integration <integration_features>` Features.
 
@@ -86,28 +84,35 @@ Project structure and processes
 
       Process
       ^^^
-      Understand how we work, by reading our :ref:`Process description <process_description>`.
+      Understand how we work, by reading our `Process description <https://eclipse-score.github.io/process_description/main/index.html>`_.
       And receive tips & tricks for our used tool stack by reading the
-      :ref:`Guidance <process_guidance>`.
+      :ref:`contribute`.
 
    .. grid-item-card::
 
       Platform Management Plan (PMP)
       ^^^
       Read about our project and organization structure in the
-      :ref:`Project Handbook <project_management_plan>`.
-      And learn how we deal with :ref:`safety_management` or care about :ref:`sw_verification`.
+      :ref:`Project Handbook <pmp>`.
+      And learn how we deal with :need:`doc__platform_safety_plan` or care about :need:`doc__verification_plan`.
 
 .. dropdown:: Click to see the complete sitemap
 
    .. toctree::
-      :maxdepth: 3
+      :maxdepth: 1
 
       requirements/index
       features/index
-      guidance/index
+      modules/index
+      contribute/index
       Releases <score_releases/index.rst>
-      process/index
+      Tools <score_tools/index.rst>
       PMP <platform_management_plan/index.rst>
-      SCORE <https://eclipse-score.github.io>
       Eclipse <https://projects.eclipse.org/projects/automotive.score>
+      design_decisions/index
+
+   .. toctree::
+      :maxdepth: 1
+      :hidden:
+
+      introduction/index

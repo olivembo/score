@@ -1,6 +1,7 @@
 {
     // General Settings
     "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "editor.insertSpaces": true,
     "editor.tabCompletion": "on",
@@ -9,31 +10,17 @@
     "editor.rulers": [
         99
     ],
-
-    // Exclude build, temp and cache folders
-    "files.watcherExclude": {
-        ".*/**": true,
-        "**/__pycache__/**": true,
-        "bazel-*/**": true,
-        ".venv*/**": true,
-        "_build/**": true,
-    },
-
-    // Python Settings
-    // Exclude build, temp and cache folders
-    "python.analysis.exclude": [
-        // Note: this overrides the default setting, so we need to re-exclude defaults like .* and **/__pycache__
-        ".*",
-        "**/__pycache__",
-        "bazel-*",
-        ".venv*",
-        "_build",
-    ],
     "[python]": {
-        // In python using 80 characters per line is the standard.
+        // When using ruff for formatting 88 characters per line is the standard.
         "editor.rulers": [
-            79
+            88
         ],
+        // Opinionated option for the future:
+        // "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.sortImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
     },
 
     // Markdown Settings
@@ -41,7 +28,7 @@
         // We mostly write markdown in some combination with python,
         // so we use the same rulers as python.
         "editor.rulers": [
-            79, 99
+            88, 99
         ]
     },
 
@@ -91,4 +78,32 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
+    "bazel.lsp.command": "bazel",
+    "bazel.lsp.args": [
+        "run",
+        "//:starpls_server"
+    ],
+    "cSpell.enabledFileTypes": {
+        "rst": true
+    },
+    "cSpell.words": [
+        "__getitem__",
+        "bazel",
+        "buildifier",
+        "getstrt",
+        "metatags",
+        "reqs"
+    ],
+    "cSpell.ignoreRegExpList": [
+        "/:\\w+:\\s+[`]?[^`,\n]+(?:,\\s*[^`,\n]+)*[`]?/", //ignore any words following :text:
+        "/:\\w+:\\s*`[^`]+`/", //ignore any words following :text: inside backticks also
+        "/\\.\\.\\s+\\w+::\\s+[`]?[^`,\\n]+(?:,\\s*[^`,\\n]+)*[`]?/", //ignore any words following .. text::
+        "/workproduct(s)?/i", //ignore workproduct word and variations
+        "/metamodel(s)?/i", //ignore metamodels word and variations
+        "/memcheck?/i", //ignore memcheck word and variations
+        "/\\.\\.\\s+\\w+/", //ignore .. word
+        "/``[^`]+``/", //ignore words between double backticks
+        "/\\*?need[a-zA-Z0-9_()]*\\*?/i", // ignore *needSomeWord*
+        "/\\b[A-Z]+(?:_[A-Z]+)*\\b/", //ignore all CAPS, also if includes underscore
+      ]
 }

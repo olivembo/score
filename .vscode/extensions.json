@@ -12,7 +12,10 @@
         // ErrorLens highlights errors and warnings in your code / docs
         "usernamehw.errorlens",
 
-        // svg-preview enables the preview of svg files inside VS Code
-        "SimonSiefke.svg-preview"
+        // Linting and formatting for Python (LSP via ruff server)
+        "charliermarsh.ruff",
+
+        // Code Spell checker
+        "streetsidesoftware.code-spell-checker",
     ]
 }
